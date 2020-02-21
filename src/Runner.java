@@ -9,9 +9,9 @@ public class Runner {
         employeesList.add(new Employees(5,"Ivan","Ivanov","manager",100000));
         employeesList.add(new Employees(6,"Robert","Stark","king",10000000));
         employeesList.add(new Employees(2,"Luke","Skywalker","jedi",1));
-        employeesList.add(new Employees(1,"Marilyn","-","actor",123456));
+        employeesList.add(new Employees(1,"Brad","Pitt","actor",123456));
         employeesList.add(new Employees(4,"Marshall","Mathers","rapper",999999));
-        employeesList.add(new Employees(3,"Ivanushka","Ivanov","waiter",555555));
+        employeesList.add(new Employees(3,"Will","Smith","actor/rapper",555555));
 
         System.out.println(employeesList);
 
