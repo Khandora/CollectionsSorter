@@ -1,9 +1,9 @@
 import java.util.Comparator;
 
-public class FirstNameSorter implements Comparator<Employees> {
+public class FirstNameSorter implements Comparator<Employee> {
 
     @Override
-    public int compare(Employees o1, Employees o2) {
+    public int compare(Employee o1, Employee o2) {
         return o1.getName().compareTo(o2.getName());
     }
 }

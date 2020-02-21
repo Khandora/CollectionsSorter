@@ -1,38 +1,21 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class Runner {
 
     public static void main(String[] args) {
-        List<Employees> employeesList = new ArrayList<>();
-        employeesList.add(new Employees(5,"Ivan","Ivanov","manager",100000));
-        employeesList.add(new Employees(6,"Robert","Stark","king",10000000));
-        employeesList.add(new Employees(2,"Luke","Skywalker","jedi",1));
-        employeesList.add(new Employees(1,"Brad","Pitt","actor",123456));
-        employeesList.add(new Employees(4,"Marshall","Mathers","rapper",999999));
-        employeesList.add(new Employees(3,"Will","Smith","actor/rapper",555555));
-
-        System.out.println(employeesList);
-
-        System.out.println("Sorted by id");
-        Collections.sort(employeesList);
-        System.out.println(employeesList);
-
-        System.out.println("Sorted by first name");
-        Collections.sort(employeesList, new FirstNameSorter());
-        System.out.println(employeesList);
-
-        System.out.println("Sorted by surname");
-        Collections.sort(employeesList, new SurnameSorter());
-        System.out.println(employeesList);
-
-        System.out.println("Sorted by profession");
-        Collections.sort(employeesList, new ProfessionSorter());
-        System.out.println(employeesList);
-
-        System.out.println("Sorted by salary");
-        Collections.sort(employeesList, new SalarySorter());
-        System.out.println(employeesList);
+        CompanyDirectory directory = new CompanyDirectory();
+        CompanyDirectory actorDirectory = new CompanyDirectory();
+        Actor actor1 = new Actor(100,"Brad", "Pitt", Actor.SECONDARY, 46900);
+        Actor actor2 = new Actor(101, "Leonardo", "DiCaprio", Actor.MAIN, 55430);
+        Producer producer1 = new Producer(200, "Ridley", "Scott", Producer.MAIN, 32000);
+        Producer producer2 = new Producer(201, "Roland", "Emmerich", Producer.MAIN, 24000);
+        Stuntman stuntman1 = new Stuntman(300,"Dar", "Robinson", Stuntman.SENIOR, 6000);
+        Stuntman stuntman2 = new Stuntman(301, "Vic", "Armstrong", Stuntman.JUNIOR, 5222);
+        directory.addEmployee(actor1);
+        directory.addEmployee(actor2);
+        directory.addEmployee(producer1);
+        directory.addEmployee(producer2);
+        directory.addEmployee(stuntman1);
+        directory.addEmployee(stuntman2);
+        directory.getList().sort(new FirstNameSorter());
+        directory.showEmployeeInfo();
     }
 }
