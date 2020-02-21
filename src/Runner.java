@@ -2,7 +2,6 @@ public class Runner {
 
     public static void main(String[] args) {
         CompanyDirectory directory = new CompanyDirectory();
-        CompanyDirectory actorDirectory = new CompanyDirectory();
         Actor actor1 = new Actor(100,"Brad", "Pitt", Actor.SECONDARY, 46900);
         Actor actor2 = new Actor(101, "Leonardo", "DiCaprio", Actor.MAIN, 55430);
         Producer producer1 = new Producer(200, "Ridley", "Scott", Producer.MAIN, 32000);
