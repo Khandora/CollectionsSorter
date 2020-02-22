@@ -22,7 +22,7 @@ public class CompanyDirectory implements Employee {
         employeeList.remove(emp);
     }
 
-    public List getList() {
+    public List<Employee> getList() {
         return employeeList;
     }
 

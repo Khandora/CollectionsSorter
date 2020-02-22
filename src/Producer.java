@@ -1,14 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-
-public class Producer implements Employee, Comparable<Producer> {
-    public static final String SECONDARY = "Secondary";
-    public static final String MAIN = "Main";
-    public static Map<String , Integer> positionPriority = new HashMap<>();
-    static {
-        positionPriority.put(SECONDARY,1);
-        positionPriority.put(MAIN,2);
-    }
+public class Producer implements Employee {
     private int id;
     private String name;
     private String surname;
@@ -51,11 +41,7 @@ public class Producer implements Employee, Comparable<Producer> {
 
     @Override
     public void showEmployeeInfo() {
-        System.out.println("Producer " + id + " " + name + " " + surname + " " + position + " " + salary + moneyType);
-    }
-
-    @Override
-    public int compareTo(Producer o) {
-        return positionPriority.get(o.position) - positionPriority.get(this.position);
+        System.out.println("Producer | " + id + " | " + name + " | " + surname +
+                " | " + position + " | " + salary + " " + moneyType);
     }
 }

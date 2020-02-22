@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public interface Employee {
     void showEmployeeInfo();
     int getId();
