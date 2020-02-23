@@ -10,6 +10,7 @@ public class CompanyDirectory implements Employee {
         {
             emp.showEmployeeInfo();
         }
+        System.out.println("----------------------------------------------------");
     }
 
     public void addEmployee(Employee emp)
