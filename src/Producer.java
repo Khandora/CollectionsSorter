@@ -1,9 +1,4 @@
-public class Producer implements Employee {
-    private int id;
-    private String name;
-    private String surname;
-    private String position;
-    private int salary;
+public class Producer extends Company {
     private String moneyType = "USD";
 
     public Producer(int id, String name, String surname, String position, int salary) {
@@ -35,12 +30,12 @@ public class Producer implements Employee {
     }
 
     @Override
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
     @Override
-    public void showEmployeeInfo() {
+    public void print() {
         System.out.println("Producer | " + id + " | " + name + " | " + surname +
                 " | " + position + " | " + salary + " " + moneyType);
     }

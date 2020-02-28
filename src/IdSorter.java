@@ -1,9 +1,9 @@
 import java.util.Comparator;
 
-public class IdSorter implements Comparator<Employee> {
+public class IdSorter implements Comparator<Company> {
 
     @Override
-    public int compare(Employee o1, Employee o2) {
+    public int compare(Company o1, Company o2) {
         return o1.getId() - o2.getId();
     }
 }

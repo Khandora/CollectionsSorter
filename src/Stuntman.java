@@ -1,9 +1,4 @@
-public class Stuntman implements Employee{
-    private int id;
-    private String name;
-    private String surname;
-    private int salary;
-    private String position;
+public class Stuntman extends Company{
     private String moneyType = "USD";
 
     public Stuntman(int id, String name, String surname, String position, int salary) {
@@ -35,12 +30,12 @@ public class Stuntman implements Employee{
     }
 
     @Override
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
     @Override
-    public void showEmployeeInfo() {
+    public void print() {
         System.out.println("Stuntman | " + id + " | " + name + " | " +
                 surname + " | " + position + " | " + salary + " " + moneyType);
     }
