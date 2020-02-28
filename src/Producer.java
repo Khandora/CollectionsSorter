@@ -1,5 +1,4 @@
 public class Producer extends Company {
-    private String moneyType = "USD";
 
     public Producer(int id, String name, String surname, String position, int salary) {
         this.id = id;

@@ -1,6 +1,7 @@
 import java.util.List;
 
 public abstract class Company {
+    public static final String moneyType = "USD";
     int id;
     String name;
     String surname;

@@ -1,5 +1,4 @@
 public class Actor extends Company{
-    private String moneyType = "USD";
 
     public Actor(int id, String name, String surname, String position, int salary) {
         this.id = id;
