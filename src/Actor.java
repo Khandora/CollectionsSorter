@@ -1,4 +1,4 @@
-public class Actor extends Company{
+public class Actor extends OrganizationStructure {
 
     public Actor(int id, String name, String surname, String position, int salary) {
         this.id = id;

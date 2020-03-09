@@ -1,17 +1,17 @@
 import java.util.List;
 
-public abstract class Company {
+public abstract class OrganizationStructure {
     public static final String moneyType = "USD";
     int id;
     String name;
     String surname;
     Integer salary;
     String position;
-    public void add(Company company){
+    public void add(OrganizationStructure organizationStructure){
         throw new UnsupportedOperationException();
     }
 
-    public void remove(Company company){
+    public void remove(OrganizationStructure organizationStructure){
         throw new UnsupportedOperationException();
     }
 
@@ -39,27 +39,27 @@ public abstract class Company {
         throw new UnsupportedOperationException();
     }
 
-    public List<Company> getList(){
+    public List<OrganizationStructure> getList(){
         return null;
     }
 
-    public List<Company> sortById(){
+    public List<OrganizationStructure> sortById(){
         throw new UnsupportedOperationException();
     }
 
-    public List<Company> sortByName(){
+    public List<OrganizationStructure> sortByName(){
         throw new UnsupportedOperationException();
     }
 
-    public List<Company> sortBySurname(){
+    public List<OrganizationStructure> sortBySurname(){
         throw new UnsupportedOperationException();
     }
 
-    public List<Company> sortByPosition(){
+    public List<OrganizationStructure> sortByPosition(){
         throw new UnsupportedOperationException();
     }
 
-    public List<Company> sortBySalary(){
+    public List<OrganizationStructure> sortBySalary(){
         throw new UnsupportedOperationException();
     }
 }

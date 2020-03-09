@@ -11,22 +11,22 @@ public class Runner {
         Stuntman stuntman2 = new Stuntman(301, "Vic", "Armstrong", PositionPriority.JUNIOR_STUNT, 522);
         Stuntman stuntman3 = new Stuntman(303,"John","Woo",PositionPriority.JUNIOR_STUNT,589);
 
-        Company actorDirectory = new CompanyDirectory(100,"Actors' directory ");
+        OrganizationStructure actorDirectory = new CompanyDirectory(100,"Actors' directory ");
         actorDirectory.add(actor1);
         actorDirectory.add(actor2);
         actorDirectory.add(actor3);
 
-        Company producerDirectory = new CompanyDirectory(200,"Producers' directory");
+        OrganizationStructure producerDirectory = new CompanyDirectory(200,"Producers' directory");
         producerDirectory.add(producer1);
         producerDirectory.add(producer2);
         producerDirectory.add(producer3);
 
-        Company stuntmanDirectory = new CompanyDirectory(300,"Stuntman's directory");
+        OrganizationStructure stuntmanDirectory = new CompanyDirectory(300,"Stuntman's directory");
         stuntmanDirectory.add(stuntman1);
         stuntmanDirectory.add(stuntman2);
         stuntmanDirectory.add(stuntman3);
 
-        Company directory = new CompanyDirectory(1,"Company's directory");
+        OrganizationStructure directory = new CompanyDirectory(1,"Company's directory");
         directory.add(actorDirectory);
         directory.add(producerDirectory);
         directory.add(stuntmanDirectory);

@@ -2,7 +2,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PositionPriority implements Comparator<Company> {
+public class PositionPriority implements Comparator<OrganizationStructure> {
     public static final String SECONDARY_ROLE = "Secondary role";
     public static final String MAIN_ROLE = "Main role";
     public static final String SECONDARY_PROD = "Secondary producer";
@@ -20,7 +20,7 @@ public class PositionPriority implements Comparator<Company> {
     }
 
     @Override
-    public int compare(Company o1, Company o2) {
+    public int compare(OrganizationStructure o1, OrganizationStructure o2) {
         return positionPriority.get(o1.getPosition()) - positionPriority.get(o2.getPosition());
     }
 }

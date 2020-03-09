@@ -1,4 +1,4 @@
-public class Stuntman extends Company{
+public class Stuntman extends OrganizationStructure {
 
     public Stuntman(int id, String name, String surname, String position, int salary) {
         this.id = id;

@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompanyDirectory extends Company{
-    List<Company> structure = new ArrayList<>();
+public class CompanyDirectory extends OrganizationStructure {
+    List<OrganizationStructure> structure = new ArrayList<>();
 
     public CompanyDirectory(int id, String name){
         this.id = id;
@@ -10,17 +10,17 @@ public class CompanyDirectory extends Company{
     }
 
     @Override
-    public void add(Company company) {
-        structure.add(company);
+    public void add(OrganizationStructure organizationStructure) {
+        structure.add(organizationStructure);
     }
 
     @Override
-    public void remove(Company company) {
-        structure.add(company);
+    public void remove(OrganizationStructure organizationStructure) {
+        structure.add(organizationStructure);
     }
 
     @Override
-    public List<Company> getList() {
+    public List<OrganizationStructure> getList() {
         return structure;
     }
 
@@ -28,51 +28,51 @@ public class CompanyDirectory extends Company{
     public void print() {
         System.out.println("\n" + getId() + " " + getName());
         System.out.println("---------------------------");
-        for (Company company : structure) {
-            company.print();
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.print();
         }
     }
 
     @Override
-    public List<Company> sortById(){
-        for (Company company : structure) {
-            company.getList().sort(new IdSorter());
-        }
-        System.out.println();
-        return structure;
-    }
-
-    @Override
-    public List<Company> sortByName() {
-        for (Company company : structure) {
-            company.getList().sort(new FirstNameSorter());
+    public List<OrganizationStructure> sortById(){
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.getList().sort(new IdSorter());
         }
         System.out.println();
         return structure;
     }
 
     @Override
-    public List<Company> sortBySurname(){
-        for (Company company : structure) {
-            company.getList().sort(new SurnameSorter());
+    public List<OrganizationStructure> sortByName() {
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.getList().sort(new FirstNameSorter());
         }
         System.out.println();
         return structure;
     }
 
     @Override
-    public List<Company> sortByPosition() {
-        for (Company company : structure) {
-            company.getList().sort(new PositionPriority());
+    public List<OrganizationStructure> sortBySurname(){
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.getList().sort(new SurnameSorter());
         }
         System.out.println();
         return structure;
     }
 
     @Override
-    public List<Company> sortBySalary() {
-        for (Company company : structure) {
-            company.getList().sort(new SalarySorter());
+    public List<OrganizationStructure> sortByPosition() {
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.getList().sort(new PositionPriority());
+        }
+        System.out.println();
+        return structure;
+    }
+
+    @Override
+    public List<OrganizationStructure> sortBySalary() {
+        for (OrganizationStructure organizationStructure : structure) {
+            organizationStructure.getList().sort(new SalarySorter());
         }
         System.out.println();
         return structure;

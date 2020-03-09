@@ -1,4 +1,4 @@
-public class Producer extends Company {
+public class Producer extends OrganizationStructure {
 
     public Producer(int id, String name, String surname, String position, int salary) {
         this.id = id;
